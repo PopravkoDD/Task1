@@ -1007,10 +1007,10 @@ RectTransform:
   m_Father: {fileID: 1895459853}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.13000001}
-  m_AnchorMax: {x: 1, y: 0.22031483}
-  m_AnchoredPosition: {x: -3.9626465, y: 0}
-  m_SizeDelta: {x: -334.06995, y: -0.32806396}
+  m_AnchorMin: {x: 0.11255553, y: 0.12933785}
+  m_AnchorMax: {x: 0.88325006, y: 0.22032434}
+  m_AnchoredPosition: {x: -0.9626465, y: 1}
+  m_SizeDelta: {x: -4.0699463, y: -2.328064}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &352564501
 MonoBehaviour:
@@ -1725,51 +1725,50 @@ MonoBehaviour:
   m_text: 'Component that wraps platform ScrollView while providing integration with
     touch locking "responder" system.
 
-    
 
-    Keep in mind that ScrollViews
-    must have a bounded height in order to work, since they contain unbounded-height
-    children into a bounded container (via a scroll interaction). In order to bound
-    the height of a ScrollView, either set the height of the view directly (discouraged)
-    or make sure all parent views have bounded height. Forgetting to transfer {flex:
+
+    Keep in mind that ScrollViews must have
+    a bounded height in order to work, since they contain unbounded-height children
+    into a bounded container (via a scroll interaction). In order to bound the height
+    of a ScrollView, either set the height of the view directly (discouraged) or
+    make sure all parent views have bounded height. Forgetting to transfer {flex:
     1} down the view stack can lead to errors here, which the element inspector makes
     quick to debug.
 
-    
 
-    Doesn''t yet support other contained responders
-    from blocking this scroll view from becoming the responder.
 
-    
+    Doesn''t yet support other contained responders from blocking
+    this scroll view from becoming the responder.
 
-    <ScrollView>
-    vs <FlatList> - which one to use?
 
-    
 
-    ScrollView renders all its react
-    child components at once, but this has a performance downside.
+    <ScrollView> vs <FlatList>
+    - which one to use?
 
-    
 
-    Imagine
-    you have a very long list of items you want to display, maybe several screens
-    worth of content. Creating JS components and native views for everything all
-    at once, much of which may not even be shown, will contribute to slow rendering
-    and increased memory usage.
 
-    
+    ScrollView renders all its react child components
+    at once, but this has a performance downside.
 
-    This is where FlatList comes into play.
-    FlatList renders items lazily, when they are about to appear, and removes items
-    that scroll way off screen to save memory and processing time.
 
-    
 
-    FlatList
-    is also handy if you want to render separators between your items, multiple columns,
-    infinite scroll loading, or any number of other features it supports out of the
-    box.'
+    Imagine you have a very
+    long list of items you want to display, maybe several screens worth of content.
+    Creating JS components and native views for everything all at once, much of which
+    may not even be shown, will contribute to slow rendering and increased memory
+    usage.
+
+
+
+    This is where FlatList comes into play. FlatList renders items
+    lazily, when they are about to appear, and removes items that scroll way off
+    screen to save memory and processing time.
+
+
+
+    FlatList is also handy if you
+    want to render separators between your items, multiple columns, infinite scroll
+    loading, or any number of other features it supports out of the box.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1934,10 +1933,10 @@ RectTransform:
   m_Father: {fileID: 1895459853}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.44547918}
-  m_AnchorMax: {x: 1, y: 0.53575015}
-  m_AnchoredPosition: {x: -3.9626465, y: 0.16360474}
-  m_SizeDelta: {x: -334.06995, y: -0.32806396}
+  m_AnchorMin: {x: 0.11255553, y: 0.44547918}
+  m_AnchorMax: {x: 0.88325006, y: 0.53237176}
+  m_AnchoredPosition: {x: -0.9626465, y: 5.1636047}
+  m_SizeDelta: {x: -4.0699463, y: 9.671936}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &658557129
 MonoBehaviour:
@@ -3652,7 +3651,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.127, y: 0.13571621}
   m_AnchorMax: {x: 0.8874168, y: 0.6723784}
-  m_AnchoredPosition: {x: 1.2000122, y: -3.9996338}
+  m_AnchoredPosition: {x: 1.2000732, y: -3.9996338}
   m_SizeDelta: {x: -6.199951, y: -1.1999512}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1138811156
@@ -5924,10 +5923,10 @@ RectTransform:
   m_Father: {fileID: 1895459853}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.286}
-  m_AnchorMax: {x: 1, y: 0.37500003}
-  m_AnchoredPosition: {x: 0, y: -0.5}
-  m_SizeDelta: {x: -334.06995, y: 2.671936}
+  m_AnchorMin: {x: 0.11255553, y: 0.284}
+  m_AnchorMax: {x: 0.88325006, y: 0.37464866}
+  m_AnchoredPosition: {x: 2.5, y: 3}
+  m_SizeDelta: {x: -3.0699463, y: -2.328064}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1651348580
 MonoBehaviour:
@@ -6158,7 +6157,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 150.35
+  m_fontSize: 150.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
