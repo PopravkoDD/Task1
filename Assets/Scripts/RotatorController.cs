@@ -17,10 +17,10 @@ public class RotatorController : MonoBehaviour
     
     void Start()
     {
-        _backButton.onClick.AddListener(PlaceCameraBack);
-        _faceButton.onClick.AddListener(PlaceCameraFace);
-        _upButton.onClick.AddListener(PlaceCameraUp);
-        _downButton.onClick.AddListener(PlaceCameraDown);
+        _backButton.onClick.AddListener(delegate { PlaceCamera(_backPoint); });
+        _faceButton.onClick.AddListener(delegate { PlaceCamera(_facePoint); });
+        _upButton.onClick.AddListener(delegate { PlaceCamera(_upPoint); });
+        _downButton.onClick.AddListener(delegate { PlaceCamera(_downPoint); });;
     }
 
     void Update()
@@ -33,26 +33,6 @@ public class RotatorController : MonoBehaviour
                gameObject.transform.Rotate(0, -_touch.deltaPosition.x * Time.deltaTime * _rotationSpeedMultiplier, 0);
             }
         }
-    }
-
-    private void PlaceCameraBack()
-    {
-        PlaceCamera(_backPoint);
-    }
-
-    private void PlaceCameraFace()
-    {
-        PlaceCamera(_facePoint);
-    }
-
-    private void PlaceCameraUp()
-    {
-        PlaceCamera(_upPoint);
-    }
-
-    private void PlaceCameraDown()
-    {
-        PlaceCamera(_downPoint);
     }
 
     private void PlaceCamera(Transform transform)
