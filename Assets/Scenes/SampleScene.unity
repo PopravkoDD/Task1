@@ -172,7 +172,7 @@ MonoBehaviour:
   _projectileIndex: 2
   layerToTrigger:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
 --- !u!65 &382132
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2069,7 +2069,7 @@ MonoBehaviour:
   _projectileIndex: 0
   layerToTrigger:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
 --- !u!65 &532002429
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2863,7 +2863,7 @@ MonoBehaviour:
   _projectileIndex: 1
   layerToTrigger:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
 --- !u!65 &668573300
 BoxCollider:
   m_ObjectHideFlags: 0

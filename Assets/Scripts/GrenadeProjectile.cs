@@ -19,7 +19,7 @@ public class GrenadeProjectile : Projectile
         _boxesCollidersList = Physics.OverlapSphere(transform.position, _radius);
         foreach (var box in _boxesCollidersList)
         {
-            if (box.gameObject.layer == LayerMask.NameToLayer("Box"))
+            if ((_layersToCheck.value & 1 << box.gameObject.layer) > 0)
             {
                 box.gameObject.GetComponent<Rigidbody>()
                     .AddForce((box.transform.position - transform.position).normalized * _explosionForce);

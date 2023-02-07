@@ -8,7 +8,7 @@ public class TriggerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer != LayerMask.NameToLayer("Robot"))
+        if ((layerToTrigger.value & 1 << other.gameObject.layer) <= 0)
         {
             return;
         }
@@ -21,7 +21,7 @@ public class TriggerController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.layer != LayerMask.NameToLayer("Robot"))
+        if ((layerToTrigger.value & 1 << other.gameObject.layer) <= 0)
         {
             return;
         }
