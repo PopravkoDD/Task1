@@ -36,15 +36,23 @@ public class CharacterMovement : MonoBehaviour
             _touches = Input.touches;
 
             if (Input.touchCount == 1 && _touches[0].phase == TouchPhase.Moved &&
-                _touches[0].position.x > Screen.width / 4 || Input.touchCount > 1 && _touches[^1].phase == TouchPhase.Moved &&
-                _touches[^1].position.x > Screen.width / 4) //how to get screen coordinates of ui elements???
+                _touches[0].position.x > Screen.width / 4) //how to get screen coordinates of ui elements???
             {
-                if (-_touches[^1].deltaPosition.y * _sensitivity + _cameraTransform.eulerAngles.x >= 271 || //?????
-                    -_touches[^1].deltaPosition.y * _sensitivity + _cameraTransform.eulerAngles.x <= 89)
+                
+                if (-_touches[0].deltaPosition.y * _sensitivity + _cameraTransform.eulerAngles.x >= 271 || //?????
+                    -_touches[0].deltaPosition.y * _sensitivity + _cameraTransform.eulerAngles.x <= 89)
                 {
-                    _cameraTransform.Rotate(-_touches[^1].deltaPosition.y * _sensitivity, 0 , 0);
+                    _cameraTransform.Rotate(-_touches[0].deltaPosition.y * _sensitivity, 0 , 0);
                 }
-                transform.Rotate(0, _touches[^1].deltaPosition.x * _sensitivity, 0);
+                transform.Rotate(0, _touches[0].deltaPosition.x * _sensitivity, 0);
+            }
+            else if (Input.touchCount == 2 && _touches[1].phase == TouchPhase.Moved &&
+                     _touches[1].position.x > Screen.width / 4) 
+            {
+                {
+                    _cameraTransform.Rotate(-_touches[1].deltaPosition.y * _sensitivity, 0 , 0);
+                }
+                transform.Rotate(0, _touches[1].deltaPosition.x * _sensitivity, 0);
             }
         }
     }
